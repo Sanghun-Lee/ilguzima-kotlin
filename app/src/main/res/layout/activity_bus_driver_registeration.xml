@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bus_driver_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버스기사 회원가입"
+        android:textColor="#14107e"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toTopOf="@id/bus_driver_text_top_guideline" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/bus_driver_text" />
+
+    <EditText
+        android:id="@+id/id_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
+
+    <Button
+        android:id="@+id/id_duplicate_check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중복확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/id_edit_text"
+        app:layout_constraintTop_toTopOf="@id/id_edit_text" />
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/id_edit_text" />
+
+    <EditText
+        android:id="@+id/password_confirm_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
+
+    <EditText
+        android:id="@+id/phone_number_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="전화번호"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/password_confirm_edit_text" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40sp"
+        android:text="취소"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/align_left_guideline" />
+
+    <Button
+        android:id="@+id/register_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40sp"
+        android:text="회원가입"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel_button" />
+
+    <!--    Vertical Guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/align_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <!--    Horizontal Guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bus_driver_text_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
